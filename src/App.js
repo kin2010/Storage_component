@@ -33,6 +33,8 @@ const theme = {
     warning: '#de9100',
     light: '#f2f4f7',
     textColor: '#1b1b1b',
+    errorAlert: '#721c24',
+    errorBgAlert: '#f8d7da',
   },
 };
 const AppWrapper = () => {

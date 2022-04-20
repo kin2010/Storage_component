@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
-export const BtnCustom = styled.button((props) => ({
+const BtnCustom = styled.button((props) => ({
   display: 'inline-block',
   cursor: 'pointer',
   textAlign: 'center',
@@ -73,7 +73,7 @@ export const BtnCustom = styled.button((props) => ({
   ...(props.size === 'small' &&
     props.variant === 'container' && {
       fontWeight: 'bold',
-      borderColor: ' #15d164',
+      borderColor: '#15d164',
       backgroundColor: ' #15d164',
       padding: '0.8rem 2rem 0.8rem 2rem !important',
       ':active': {

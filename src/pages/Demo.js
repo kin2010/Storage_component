@@ -45,7 +45,54 @@ export default function Demo() {
         </Button>
         <br />
         <br />
-        <Alert variant="success"> Invalid email/password credentials.</Alert>
+        <Alert severity="success" variant="outlined">
+          {' '}
+          Invalid email/password credentials.
+        </Alert>
+        <br />
+        <br />
+        <Alert icon={<i className="far fa-thumbs-up"></i>} variant="outlined">
+          Invalid email/password credentials.
+        </Alert>
+        <Alert icon={<i className="far fa-thumbs-up"></i>} variant="outlined">
+          Invalid email/password credentials.
+        </Alert>
+        <Alert icon={<i className="far fa-thumbs-up"></i>} severity="error">
+          {' '}
+          Invalid email/password credentials.
+        </Alert>
+        <Alert
+          icon={<i className="far fa-thumbs-up"></i>}
+          severity="success"
+          variant="outlined"
+        >
+          {' '}
+          Invalid email/password credentials.
+        </Alert>
+        <Alert
+          icon={<i className="far fa-thumbs-up"></i>}
+          severity="success"
+          variant="filled"
+        >
+          {' '}
+          Invalid email/password credentials.
+        </Alert>
+        <Alert
+          icon={<i className="far fa-thumbs-up"></i>}
+          severity="info"
+          variant="filled"
+        >
+          {' '}
+          Invalid email/password credentials.
+        </Alert>
+        <Alert icon={<i className="far fa-thumbs-up"></i>} severity="info">
+          {' '}
+          Invalid email/password credentials.
+        </Alert>
+        <Alert icon={<i className="far fa-thumbs-up"></i>} severity="warning">
+          {' '}
+          Invalid email/password credentials.
+        </Alert>
         {/* <Button variant="btn btn-primary btn-small">
         <span>sign up</span>
       </Button>
