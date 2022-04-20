@@ -1,0 +1,72 @@
+const dynamicStyle = () =>
+  css`
+    color: red;
+  `;
+export const Btn = styled.button`
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: calc(4 / 3);
+  border: 1px solid rgba(0, 0, 0, 0);
+  vertical-align: middle;
+  color: #22ab59;
+  transition: color 0.15s;
+  ${(props) =>
+    props.variant === 'primary' &&
+    `color:#fff;
+    border-radius: 0.625rem;
+    background-color:#22ab59;
+    border-color: #22ab59;
+    text-transform: uppercase;
+    padding: 1.25rem 3rem;
+    font-weight: 700;
+    &:hover,&:focus{
+      border-color: #1e964e;
+      background-color: #1e964e;
+    }
+    `}
+  ${(props) => props.variant === 'outline' && dynamicStyle}
+`;
+export const Butz = ({ variant, children, isLoading, ...rest }) => {
+  return (
+    <Btn variant={variant} isLoading={isLoading} {...rest}>
+      {children}
+    </Btn>
+  );
+};
+export const BtnPrimary = styled(Btn)`
+  color: #fff;
+  background-color: #22ab59;
+  border-color: #22ab59;
+  text-transform: uppercase;
+  padding: 1.25rem 3rem;
+  font-weight: 700;
+`;
+
+const Button = ({
+  children = null,
+  variant = null,
+  href = null,
+  disabled = false,
+  fontSize = null,
+  color = null,
+  onSubmit = () => {},
+}) => {
+  return (
+    <>
+      <a
+        style={{ fontSize: fontSize, color: color }}
+        className={variant}
+        href={href}
+        disabled={disabled}
+        onSubmit={onSubmit}
+      >
+        {children}
+      </a>
+    </>
+  );
+};
+
+export default React.memo(Button);

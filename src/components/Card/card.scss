@@ -1,0 +1,100 @@
+.card {
+  background-color: #fff;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+}
+.card-body {
+  padding: 0.75rem 0 0.75rem 2.1875rem;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #1b1b1b;
+  font-weight: normal;
+  max-width: 472px;
+}
+.card-header {
+  margin-bottom: 0;
+}
+.card-footer {
+  padding: 0.75rem 1.25rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+.card-footer:last-child {
+  border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+}
+.card-button {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  padding: 12px 0 12px 35px;
+  background-color: transparent;
+  text-align: left;
+  text-transform: none;
+  font-size: 18px;
+  line-height: normal;
+  color: #30394d;
+  border: 0;
+  border-radius: 0;
+  font-weight: 700;
+  box-shadow: none;
+  outline: none;
+}
+.card-button:focus {
+  outline: none;
+}
+.card-button:not(.closed)::after {
+  content: '';
+  position: absolute;
+  height: 14px;
+  width: 2px;
+  top: 15px;
+  left: 6px;
+  background: inherit;
+  background: #22ab59;
+}
+.card-button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 14px;
+  top: 21px;
+  background: inherit;
+  background: #22ab59;
+}
+.card-button::after {
+  content: '';
+  position: absolute;
+  width: 0;
+}
+#card-collapse {
+  transition: display 2s linear;
+}
+.card-collapse {
+  display: none;
+}
+.isactive {
+  .card-button {
+    color: #22ab59;
+  }
+  .card-button::after {
+    width: 0;
+  }
+  .card-collapse {
+    display: block;
+  }
+}

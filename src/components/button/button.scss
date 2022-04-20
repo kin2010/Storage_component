@@ -1,0 +1,73 @@
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: 20px 48px;
+  padding: 0.375rem 0.75rem;
+  font-size: 16px;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 0.625rem;
+  font-weight: bold;
+  line-height: calc(4 / 3);
+  border: 1px solid rgba(0, 0, 0, 0);
+  vertical-align: middle;
+  transition: color 0.15s;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #22ab59;
+  border-color: #22ab59;
+  text-transform: uppercase;
+  padding: 1.25rem 3rem;
+  font-weight: 700;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active {
+  border-color: #1e964e;
+  background-color: #1e964e;
+}
+.btn-primary:focus,
+.btn-link:focus {
+  color: #fff;
+  background-color: #1c8b48;
+  border-color: #1a8043;
+  -webkit-box-shadow: 0 0 0 0.2rem rgb(67 184 114 / 50%);
+  box-shadow: 0 0 0 0.2rem rgb(67 184 114 / 50%);
+}
+.btn-small {
+  background-color: #15d164;
+  border-color: #15d164;
+  font-size: 0.8125rem;
+  border-radius: 0.1875rem;
+  font-weight: bold !important;
+  padding: 0.5rem 1.25rem 0.5rem 1.25rem;
+  text-transform: capitalize !important;
+  &:hover {
+    background-color: #15d164;
+    border-color: #15d164;
+  }
+}
+.btn-lg {
+  padding: 12px 20px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 1px;
+}
+.btn-block {
+  display: block;
+  width: 100%;
+}
+.btn-link {
+  font-weight: 400;
+  font-size: 0.8125rem;
+  padding: 0.5rem 1.25rem 0.5rem 1.25rem;
+  color: #22ab59;
+  text-decoration: none;
+}
+.btn-link:focus {
+  background-color: #fff;
+  border-color: none;
+  color: #22ab59;
+}
