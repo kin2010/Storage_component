@@ -1,4 +1,4 @@
-import React, { forwardRef, useRef, useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 import styled from '@emotion/styled';
 const mapVariantColor = (props, color) => {
   return {

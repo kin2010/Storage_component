@@ -1,6 +1,8 @@
 // import useLocalStorage from "hooks/useLocalStorage";
 
 import Alert from 'components/Alert/index';
+import Card from 'components/Card/index';
+import Typography from 'components/Typography/Typography';
 import Button from '../components/button/index';
 export default function Demo() {
   // const [auth, setAuth] = useLocalStorage("auth", {});
@@ -8,7 +10,8 @@ export default function Demo() {
   return (
     <>
       <div style={{ paddingLeft: '30px', paddingTop: '30px' }}>
-        <Button size="small">
+        <Card></Card>
+        {/* <Button size="small" variant="standard">
           <span>Login</span>
         </Button>
         <br />
@@ -23,14 +26,7 @@ export default function Demo() {
         </Button>{' '}
         <br />
         <br />
-        <Button
-          onClick={() => {
-            console.log('hehehe');
-          }}
-          fullWidth
-          size="medium"
-          variant="container"
-        >
+        <Button fullWidth size="medium" variant="container">
           Login
         </Button>
         <br />
@@ -92,7 +88,37 @@ export default function Demo() {
         <Alert icon={<i className="far fa-thumbs-up"></i>} severity="warning">
           {' '}
           Invalid email/password credentials.
-        </Alert>
+        </Alert> */}
+        <Typography component="p" align="left" variant="h1">
+          there is a dog beside a table
+        </Typography>
+        <Typography align="left" variant="span">
+          there is a dog beside a table
+        </Typography>
+        <Typography align="left" variant="h2">
+          there is a dog beside a table
+        </Typography>
+        <Typography align="right" variant="h3">
+          there is a dog beside a table
+        </Typography>
+        <Typography align="left" variant="h4">
+          there is a dog beside a table
+        </Typography>
+        <Typography align="left" variant="h5">
+          there is a dog beside a table
+        </Typography>
+        <Typography align="left" variant="h6">
+          there is a dog beside a table
+        </Typography>
+        <Typography align="center" variant="h4_primary">
+          there is a dog beside a table primary
+        </Typography>
+        <Typography component="h3" align="center" variant="h4_primary">
+          there is a dog beside a table primary
+        </Typography>
+        <Typography component="h1" variant="span">
+          akakaak
+        </Typography>
         {/* <Button variant="btn btn-primary btn-small">
         <span>sign up</span>
       </Button>

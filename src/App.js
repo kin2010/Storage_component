@@ -35,6 +35,10 @@ const theme = {
     textColor: '#1b1b1b',
     errorAlert: '#721c24',
     errorBgAlert: '#f8d7da',
+    hoverBtn: '#156b38',
+    activeBtn: '#1e964e',
+    smallBtn: '#15d164',
+    smallActiveBtn: '#1e964e',
   },
 };
 const AppWrapper = () => {

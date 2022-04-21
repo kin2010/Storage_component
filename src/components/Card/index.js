@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './card.scss';
 const Card = ({ data = null }) => {
   const [dataCard, setDataCard] = useState(data);
   const [active, setActive] = useState(0);

@@ -27,7 +27,7 @@ const BtnCustom = styled.button((props) => ({
     boxShadow: '0 0 0 0.32rem rgb(67 184 114 / 50%)',
   },
   ':hover': {
-    color: '#156b38',
+    color: `${props.theme.colors.hoverBtn}`,
   },
   ...(props.variant === 'container' && {
     color: `${props.theme.colors.white}`,
@@ -39,8 +39,8 @@ const BtnCustom = styled.button((props) => ({
     padding: '2rem 4.8rem',
     fontWeight: '700',
     ':hover,:not(:disabled):active': {
-      borderColor: '#1e964e',
-      backgroundColor: '#1e964e',
+      borderColor: `${props.theme.colors.activeBtn}`,
+      backgroundColor: `${props.theme.colors.activeBtn}`,
       color: `${props.theme.colors.white}`,
     },
   }),
@@ -73,12 +73,12 @@ const BtnCustom = styled.button((props) => ({
   ...(props.size === 'small' &&
     props.variant === 'container' && {
       fontWeight: 'bold',
-      borderColor: '#15d164',
-      backgroundColor: ' #15d164',
+      borderColor: `${props.theme.colors.smallBtn}`,
+      backgroundColor: `${props.theme.colors.smallBtn}`,
       padding: '0.8rem 2rem 0.8rem 2rem !important',
       ':active': {
-        borderColor: '#1e964e',
-        backgroundColor: '#1e964e',
+        borderColor: `${props.theme.colors.smallActiveBtn}`,
+        backgroundColor: `${props.theme.colors.smallActiveBtn}`,
       },
     }),
 }));

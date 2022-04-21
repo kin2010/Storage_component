@@ -1,0 +1,226 @@
+import React from 'react';
+import './typography.scss';
+const Typography = ({
+  variant = 'h1',
+  children = null,
+  align = 'inherit ',
+  component = null,
+  classes = null,
+  ...rest
+}) => {
+  const RenderTypography = () => {
+    let RenderComponent = component !== null ? `${component}` : `${variant}`;
+    if (RenderComponent === 'h4_subtitle') {
+      RenderComponent = 'h4';
+    }
+    return (
+      <RenderComponent
+        style={{ textAlign: align }}
+        className={`typoraphy ${variant} ${!!classes ? classes : ''}`}
+        {...rest}
+      >
+        {children}
+      </RenderComponent>
+    );
+  };
+  return (
+    <>
+      <RenderTypography></RenderTypography>
+    </>
+  );
+};
+export default React.memo(Typography);
+
+
+.typoraphy {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-weight: 700;
+  line-height: 1.2;
+}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: #203259;
+}
+.h1 {
+  font-size: 3.5rem;
+  line-height: 1.17857143;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.h2 {
+  font-size: 3rem;
+  line-height: 1.16666667;
+  text-transform: uppercase;
+}
+.h3 {
+  font-size: 1.875rem;
+  line-height: 1.33333333;
+  font-weight: 700;
+}
+.h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.h4_subtitle {
+  color: #22ab59;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 700;
+}
+.h5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.h6 {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.span {
+  font-family: 'Farsan', sans-serif;
+  font-size: 1.5rem;
+  line-height: 0.91666667;
+  font-weight: 300;
+  color: #1b1b1f;
+}
+.p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #1b1b1b;
+}
+
+
+${(props) =>
+    props.variant === 'h2' &&
+    `font-size: 3rem;
+    line-height: 1.16666667;
+    text-transform: uppercase;
+    color:${props.theme.colors.dark}`};
+  ${(props) =>
+    props.variant === 'h3' &&
+    `font-size: 1.875rem;
+    line-height: 1.33333333;
+    font-weight: 700;
+    color:${props.theme.colors.dark}`};
+  ${(props) =>
+    props.variant === 'h4' &&
+    `font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color:${props.theme.colors.dark}`};
+  ${(props) =>
+    props.variant === 'h5' &&
+    ` color: ${props.theme.colors.success};
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 700;`}
+  ${(props) =>
+    props.variant === 'h6' &&
+    `font-size: 0.875rem;
+    font-weight: 500;
+    color:${props.theme.colors.dark}`};
+  ${(props) =>
+    props.variant === 'span' &&
+    `  font-family: 'Farsan', sans-serif;
+    font-size: 1.5rem;
+    line-height: 0.91666667;
+    font-weight: 300;
+    color:${props.theme.colors.textColor}`};
+  ${(props) =>
+    props.variant === 'p' &&
+    `  font-size: 1.25rem;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #1b1b1b;
+    color:${props.theme.colors.textColor}`};
+
+
+
+styled(`${component | variant}`)`
+    text-align: ${(props) => props.align};
+    ${(props) =>
+      props.variant === 'h1' &&
+      `font-size: 56px;
+    line-height: 1.17857143;
+    text-transform: uppercase;
+    font-weight: 700;
+    color:${props.theme.colors.dark}`}
+    ${(props) =>
+      props.variant === 'h2' &&
+      `font-size: 48px;
+  line-height: 1.16666667;
+  text-transform: uppercase;
+  color:${props.theme.colors.dark}`};
+    ${(props) =>
+      props.variant === 'h3' &&
+      `font-size: 30px;
+  line-height: 1.33333333;
+  font-weight: 700;
+  color:${props.theme.colors.dark}`};
+    ${(props) =>
+      props.variant === 'h4' &&
+      `font-size: 20px  ;
+  font-weight: 700;
+  line-height: 1.5;
+  color:${props.theme.colors.dark}`};
+    ${(props) =>
+      props.variant === 'h5' &&
+      ` color: ${props.theme.colors.success};
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 700;`}
+    ${(props) =>
+      props.variant === 'h6' &&
+      `font-size: 14px;
+  font-weight: 500;
+  color:${props.theme.colors.dark}`};
+    ${(props) =>
+      props.variant === 'span' &&
+      `font-family: 'Farsan', sans-serif;
+  font-size: 24px;
+  line-height: 0.91666667;
+  font-weight: 300;
+  color:${props.theme.colors.textColor}`};
+    ${(props) =>
+      props.variant === 'p' &&
+      `  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 300; 
+  color:${props.theme.colors.textColor}`};
+    ${(props) =>
+      props.variant === 'h4_primary' &&
+      `
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 700;
+  color:${props.theme.colors.primary}`};
+  `;
+
+
+
+  const RenderTypography = ({
+  className,
+  component,
+  variant,
+  children,
+  ...rest
+}) => {
+  let RenderComponent = component !== null ? `${component}` : `${variant}`;
+  if (RenderComponent === 'h4_primary') {
+    RenderComponent = 'h4';
+  }
+  return (
+    <RenderComponent className={className} {...rest}>
+      {children}
+    </RenderComponent>
+  );
+};
