@@ -95,6 +95,12 @@ export default function Demo() {
         <br />
         <br />
         <FileUpload label="Pick image" multiple accept="image/*"></FileUpload>
+        <FileUpload
+          label="Pick image"
+          maxSize={555}
+          accept="image/*"
+          isLoading
+        ></FileUpload>
         {/* <Typography component="p" align="left" variant="h1">
           there is a dog beside a table
         </Typography>
