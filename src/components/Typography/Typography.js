@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
 const Typography = forwardRef(
-  ({ component = null, variant = 'h1', align, children }, ref) => {
+  ({ component, variant, align, children }, ref) => {
     const TyporaphyCustom = styled(
       `${component ? component : variant !== 'h4_primary' ? variant : 'h4'}`,
     )`
@@ -75,4 +75,8 @@ const Typography = forwardRef(
     );
   },
 );
+Typography.defaultProps = {
+  component: null,
+  variant: 'h2',
+};
 export default React.memo(Typography);

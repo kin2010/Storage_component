@@ -4,13 +4,13 @@ import Alert from 'components/Alert/index';
 import Card from 'components/Card/index';
 import Typography from 'components/Typography/Typography';
 import Button from '../components/button/index';
+import FileUpload from '../components/FileUpload/index';
 export default function Demo() {
   // const [auth, setAuth] = useLocalStorage("auth", {});
 
   return (
     <>
       <div style={{ paddingLeft: '30px', paddingTop: '30px' }}>
-        <Card></Card>
         {/* <Button size="small" variant="standard">
           <span>Login</span>
         </Button>
@@ -89,7 +89,13 @@ export default function Demo() {
           {' '}
           Invalid email/password credentials.
         </Alert> */}
-        <Typography component="p" align="left" variant="h1">
+
+        <FileUpload></FileUpload>
+        <br />
+        <br />
+        <br />
+        <FileUpload label="Pick image" multiple accept="image/*"></FileUpload>
+        {/* <Typography component="p" align="left" variant="h1">
           there is a dog beside a table
         </Typography>
         <Typography align="left" variant="span">
@@ -117,8 +123,8 @@ export default function Demo() {
           there is a dog beside a table primary
         </Typography>
         <Typography component="h1" variant="span">
-          akakaak
-        </Typography>
+          vc luôn hhahaha
+        </Typography> */}
         {/* <Button variant="btn btn-primary btn-small">
         <span>sign up</span>
       </Button>
