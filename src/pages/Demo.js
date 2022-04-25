@@ -2,6 +2,7 @@
 
 import Alert from 'components/Alert/index';
 import Card from 'components/Card/index';
+import Text from 'components/Text';
 import Typography from 'components/Typography/Typography';
 import Button from '../components/button/index';
 import FileUpload from '../components/FileUpload/index';
@@ -10,7 +11,42 @@ export default function Demo() {
 
   return (
     <>
+      <Typography component={<Alert> </Alert>} variant="h1" align="right">
+        akakak
+      </Typography>
+      <Typography variant="h4Primary" align="center">
+        akakak
+      </Typography>
+      <Typography variant="span">
+        sau taats ca minh lai tro ve vois nhua
+      </Typography>
+      <Typography variant="p">akakak</Typography>
+      <Alert severity="success" variant="outlined">
+        hai ba bon nam sau bay,wtf is that
+      </Alert>
+      <br />
+      <br />
+      <br />
+      <br />
+      <Alert variant="outlined">hai ba bon nam sau bay,wtf is that</Alert>
+      <Text multiple color="green"></Text>
       <div style={{ paddingLeft: '30px', paddingTop: '30px' }}>
+        <Button color="info" variant="container">
+          success
+        </Button>
+        <Button color="warning" variant="container">
+          success
+        </Button>
+        <Button variant="outlined">success</Button>
+        <Button color="danger" variant="outlined">
+          success
+        </Button>
+        <Button size="small" variant="container" color="info">
+          hehehezczc
+        </Button>
+        <Button fullWidth variant="container" color="info" isLoading>
+          hehehe
+        </Button>
         {/* <Button size="small" variant="standard">
           <span>Login</span>
         </Button>

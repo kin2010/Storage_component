@@ -1,0 +1,61 @@
+
+const StyledUploadFile = styled(UploadFileCustom)((props) => ({
+  border: `1px solid ${UploadFileColor.borderUpload}`,
+  padding: '7px 47px 9px 51px',
+  position: 'relative',
+  borderRadius: '0.125rem',
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  color: props.theme.colors.textColor,
+  width: '165px',
+  height: '39px',
+  '.fileError': {
+    color: 'red',
+    position: 'absolute',
+    bottom: '6px',
+    left: '50%',
+    transform: 'translate(-50%, 20px)',
+    width: '100%',
+    textAlign: 'center',
+  },
+  '&:hover': {
+    borderColor: props.isLoading
+      ? UploadFileColor.borderUpload
+      : props.theme.colors.primary,
+  },
+  '.file': {
+    opacity: 0,
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    top: 0,
+    left: 0,
+    zIndex: 99,
+    cursor: props.isLoading ? 'default' : 'pointer',
+  },
+  ' & > div': {
+    width: '165px',
+    height: ' 39px',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    display: 'flex',
+    alignItems: 'center',
+    paddingLeft: '17px',
+    justifyContent: 'space-between',
+    paddingRight: '52px',
+  },
+  '.label': {
+    fontSize: '13px',
+    fontWeight: 500,
+    color: props.theme.colors.textColor,
+    cursor: 'pointer',
+  },
+  ' .list-file': {
+    display: 'flex',
+    flexDirection: 'column',
+    position: 'absolute',
+    top: '41px',
+    padding: 0,
+  },
+}));

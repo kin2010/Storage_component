@@ -224,3 +224,32 @@ styled(`${component | variant}`)`
     </RenderComponent>
   );
 };
+
+
+
+
+const TyporaphyCustom = styled(
+  `${component ? component : variant !== 'h4_primary' ? variant : 'h4'}`,
+)`
+  text-align: ${(props) => props.align},
+ 
+  ${(props) =>
+    props.variant === 'h4' &&
+    ``},
+  ${(props) =>
+    props.variant === 'h4_primary' &&
+    `
+      `},
+  ${(props) =>
+    props.variant === 'h5' &&
+    `}
+  ${(props) =>
+    props.variant === 'h6' &&
+    `},
+  ${(props) =>
+    props.variant === 'span' &&
+    ``},
+  ${(props) =>
+    props.variant === 'p' &&
+    ` `},
+`,

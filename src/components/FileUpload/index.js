@@ -121,7 +121,6 @@ const InputUpload = ({
   const [fileError, setFileError] = useState('');
   const [imageReviews, setImageReview] = useState('');
   const [isConfirm, setConfirm] = useState(false);
-  console.log(isLoading, rest);
   const handleCancer = () => {
     setConfirm(false);
     setImageReview(null);
@@ -216,147 +215,147 @@ export const UploadFileColor = {
   textUpload: '#a8b0bf',
   backgroundUpload: '#f5f7fa',
 };
-const FileUploadCustom = styled(InputUpload)`
-  background-color: ${UploadFileColor.backgroundUpload};
-  display: flex;
-  align-items: center;
-  border: 1px dashed ${UploadFileColor.borderUpload};
-  padding: 8px 5px;
-  border-radius: 2px;
-  .avatar-upload {
-    &__reviews {
-      flex-shrink: 0;
-      width: 128px;
-      height: 128px;
-      position: relative;
-      img {
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-      }
-    }
-    &__actions {
-      button:first-of-type {
-        margin-right: 5px;
-        background-color: red;
-      }
-      button {
-        font-size: 14px;
-      }
-    }
-    &__wrap {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      position: relative;
-      .description {
-        color: red;
-        position: absolute;
-        bottom: 6px;
-        left: 50%;
-        transform: translate(-50%, 20px);
-        width: 100%;
-        text-align: center;
-      }
-    }
-    &__text,
-    &__or {
-      color: ${UploadFileColor.textUpload};
-      font-weight: 500;
-      font-size: 14px;
-      min-width: 197px;
-    }
-    &__or {
-      color: ${UploadFileColor.textUpload};
-      margin: 12px auto;
-      position: relative;
-      width: 286px;
-      position: relative;
-      max-width: 100%;
-      span {
-        padding: 0 30px;
-        z-index: 2;
-        background-color: ${UploadFileColor.backgroundUpload};
-        postion: relative;
-      }
-      &:before {
-        content: '';
-        width: 100%;
-        height: 1px;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        z-index: -1;
-        background: rgba(168, 176, 191, 0.23);
-      }
-      &:after {
-        content: '';
-        width: 100%;
-        height: 1px;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        z-index: -1;
-        background: rgba(168, 176, 191, 0.23);
-      }
-    }
-    &__uploader {
-      border: 1px solid ${UploadFileColor.borderUpload};
-      padding: 7px 47px 9px 51px;
-      position: relative;
-      border-radius: 0.125rem;
-      margin-left: auto;
-      margin-right: auto;
-      color: ${(props) => props.theme.colors.textColor};
-      width: 165px;
-      height: 39px;
+const FileUploadCustom = styled(InputUpload)((props) => ({
+  backgroundColor: UploadFileColor.backgroundUpload,
+  display: 'flex',
+  alignItems: 'center',
+  border: `1px dashed ${UploadFileColor.borderUpload}`,
+  padding: '8px 5px',
+  borderRadius: '2px',
+  '.avatar-upload': {
+    ' &__reviews': {
+      flexShrink: 0,
+      width: '128px',
+      height: '128px',
+      position: 'relative',
+      img: {
+        objectFit: 'cover',
+        height: '100%',
+        width: '100%',
+      },
+    },
+    '&__actions': {
+      'button:first-of-type': {
+        marginRight: '5px',
+        backgroundColor: 'red',
+      },
+      button: {
+        fontSize: '14px',
+      },
+    },
+    '&__wrap': {
+      textAlign: 'center',
+      display: 'flex',
+      flexDirection: 'column',
+      flexGrow: 1,
+      position: 'relative',
+      ' .description': {
+        color: 'red',
+        position: 'absolute',
+        bottom: '6px',
+        left: '50%',
+        transform: 'translate(-50%, 20px)',
+        width: '100%',
+        textAlign: 'center',
+      },
+    },
+    ' &__text, &__or ': {
+      color: UploadFileColor.textUpload,
+      fontWeight: '500',
+      fontSize: '14px',
+      minWidht: '197px',
+    },
+    ' &__or ': {
+      color: UploadFileColor.textUpload,
+      margin: '12px auto',
 
-      &:hover {
-        border-color: ${(props) => props.theme.colors.primary};
-      }
-      .file {
-        opacity: 0;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: 99;
-      }
-      & > div {
-        width: 165px;
-        height: 39px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        padding-left: 17px;
-        justify-content: space-between;
-        padding-right: 52px;
-      }
-      i {
-        font-size: 16px;
-        color: ${UploadFileColor.iconFileUploadColor};
-      }
-
-      .label {
-        font-size: 13px;
-        font-weight: 500;
-        color: ${(props) => props.theme.colors.textColor};
-        cursor: pointer;
-      }
-      .list-file {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 41px;
-        padding: 0;
-      }
-    }
-  }
-`;
+      width: '286px',
+      position: 'relative',
+      maxWidth: '100%',
+      ' span': {
+        padding: '0 30px',
+        zIndex: 2,
+        backgroundColor: UploadFileColor.backgroundUpload,
+        postion: 'relative',
+      },
+      '&:before': {
+        content: '""',
+        width: '100%',
+        height: '1px',
+        position: 'absolute',
+        top: '50%',
+        left: 0,
+        zIndex: -1,
+        background: 'rgba(168, 176, 191, 0.23)',
+      },
+      ' &:after': {
+        content: '""',
+        width: '100%',
+        height: '1px',
+        position: 'absolute',
+        top: '50%',
+        right: 0,
+        zIndex: -1,
+        background: 'rgba(168, 176, 191, 0.23)',
+      },
+    },
+    '&__uploader': {
+      border: `1px solid ${UploadFileColor.borderUpload}`,
+      padding: '7px 47px 9px 51px',
+      position: 'relative',
+      borderRadius: '0.125rem',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      color: props.theme.colors.textColor,
+      width: '165px',
+      height: '39px',
+      '&:hover': {
+        borderColor: props.isLoading
+          ? UploadFileColor.borderUpload
+          : props.theme.colors.primary,
+      },
+      '.file': {
+        opacity: 0,
+        position: 'absolute',
+        width: '100%',
+        height: '100%',
+        top: 0,
+        left: 0,
+        zIndex: 99,
+        cursor: props.isLoading ? 'default' : 'pointer',
+      },
+      ' & > div': {
+        width: '165px',
+        height: ' 39px',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        display: 'flex',
+        alignItems: 'center',
+        paddingLeft: '17px',
+        justifyContent: 'space-between',
+        paddingRight: '52px',
+      },
+      ' i': {
+        fontSize: ' 16px',
+        color: UploadFileColor.iconFileUploadColor,
+      },
+      '.label': {
+        fontSize: '13px',
+        fontWeight: 500,
+        color: props.theme.colors.textColor,
+        cursor: 'pointer',
+      },
+      ' .list-file': {
+        display: 'flex',
+        flexDirection: 'column',
+        position: 'absolute',
+        top: '41px',
+        padding: 0,
+      },
+    },
+  },
+}));
 const FileUpload = ({ icon, accept, maxSize, label, isLoading, ...rest }) => {
   return (
     <FileUploadCustom

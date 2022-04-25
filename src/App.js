@@ -9,7 +9,7 @@ const App = () => {
   const routing = useRoutes(routes());
   return routing;
 };
-const theme = {
+export const theme = {
   colors: {
     blue: '#2d6eed',
     indigo: '#6610f2',
@@ -39,8 +39,15 @@ const theme = {
     activeBtn: '#1e964e',
     smallBtn: '#15d164',
     smallActiveBtn: '#1e964e',
+    // isLoading: '#343a40',
+    // activeBtn: '#1e964e',
+    // smallBtn: '#15d164',
+    // smallActiveBtn: '#1e964e',
+    // borderWhite:'rgba(0, 0, 0, 0)',
+    // focusShadow:' 0 0 0 0.32rem rgb(67 184 114 / 50%)'
   },
 };
+
 const AppWrapper = () => {
   return (
     <ThemeProvider theme={theme}>
